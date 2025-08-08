@@ -420,7 +420,7 @@ def setup_driver():
         options.add_experimental_option("prefs", prefs)
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
-        options.add_argument("--headless")
+        
 
         driver = uc.Chrome(options=options, version_main=138)
         print("✓ Successfully created driver with Chrome 138")
@@ -432,7 +432,6 @@ def setup_driver():
         options = uc.ChromeOptions()
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
-        options.add_argument("--headless")
         driver = uc.Chrome(options=options)
         print("✓ Successfully created driver with fallback method")
         return driver
